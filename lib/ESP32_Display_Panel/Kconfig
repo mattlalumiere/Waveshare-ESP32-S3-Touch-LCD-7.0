@@ -407,15 +407,15 @@ menu "ESP Panel Configuration"
                     bool "Keep CS inactive after deleting handle"
                     default y
 
-                config ESP_PANEL_LCD_SPI_CS_USE_EXPNADER
+                config ESP_PANEL_LCD_SPI_CS_USE_EXPANDER
                     bool "Use IO expander to control CS"
                     default n
 
-                config ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER
+                config ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER
                     bool "Use IO expander to control SCL"
                     default n
 
-                config ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER
+                config ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER
                     bool "Use IO expander to control SDA"
                     default n
 

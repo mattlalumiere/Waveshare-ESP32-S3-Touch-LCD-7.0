@@ -130,9 +130,9 @@
     #define ESP_PANEL_LCD_SPI_LSB_FIRST         (0)
     #define ESP_PANEL_LCD_SPI_CS_HIGH_ACTIVE    (0)
     #define ESP_PANEL_LCD_SPI_DEL_KEEP_CS       (1)
-    #define ESP_PANEL_LCD_SPI_CS_USE_EXPNADER   (1)
-    #define ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER  (1)
-    #define ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER  (1)
+    #define ESP_PANEL_LCD_SPI_CS_USE_EXPANDER   (1)
+    #define ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER  (1)
+    #define ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER  (1)
     #define ESP_PANEL_LCD_SPI_IO_CS             (1)
     #define ESP_PANEL_LCD_SPI_IO_SCL            (2)
     #define ESP_PANEL_LCD_SPI_IO_SDA            (3)
@@ -148,7 +148,7 @@
  *      - 1: BGR
  */
 #define ESP_PANEL_LCD_COLOR_SPACE   (0)
-#define ESP_PANEL_LCD_INEVRT_COLOR  (0)
+#define ESP_PANEL_LCD_INVERT_COLOR  (0)
 
 /* LCD Transformation Flags */
 #define ESP_PANEL_LCD_SWAP_XY       (0)

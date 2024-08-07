@@ -567,27 +567,27 @@
                 #endif
             #endif
 
-            #ifndef ESP_PANEL_LCD_SPI_CS_USE_EXPNADER
-                #ifdef CONFIG_ESP_PANEL_LCD_SPI_CS_USE_EXPNADER
-                    #define ESP_PANEL_LCD_SPI_CS_USE_EXPNADER  CONFIG_ESP_PANEL_LCD_SPI_CS_USE_EXPNADER
+            #ifndef ESP_PANEL_LCD_SPI_CS_USE_EXPANDER
+                #ifdef CONFIG_ESP_PANEL_LCD_SPI_CS_USE_EXPANDER
+                    #define ESP_PANEL_LCD_SPI_CS_USE_EXPANDER  CONFIG_ESP_PANEL_LCD_SPI_CS_USE_EXPANDER
                 #else
-                    #define ESP_PANEL_LCD_SPI_CS_USE_EXPNADER  (0)
+                    #define ESP_PANEL_LCD_SPI_CS_USE_EXPANDER  (0)
                 #endif
             #endif
 
-            #ifndef ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER
-                #ifdef CONFIG_ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER
-                    #define ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER CONFIG_ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER
+            #ifndef ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER
+                #ifdef CONFIG_ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER
+                    #define ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER CONFIG_ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER
                 #else
-                    #define ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER (0)
+                    #define ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER (0)
                 #endif
             #endif
 
-            #ifndef ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER
-                #ifdef CONFIG_ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER
-                    #define ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER CONFIG_ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER
+            #ifndef ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER
+                #ifdef CONFIG_ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER
+                    #define ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER CONFIG_ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER
                 #else
-                    #define ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER (0)
+                    #define ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER (0)
                 #endif
             #endif
 

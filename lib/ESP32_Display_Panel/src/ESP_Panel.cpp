@@ -80,11 +80,11 @@ void ESP_Panel::init(void)
 #if !ESP_PANEL_LCD_BUS_SKIP_INIT_HOST
     esp_lcd_panel_io_3wire_spi_config_t lcd_bus_host_cfg = {
         .line_config = {
-            .cs_io_type = (panel_io_type_t)ESP_PANEL_LCD_SPI_CS_USE_EXPNADER,
+            .cs_io_type = (panel_io_type_t)ESP_PANEL_LCD_SPI_CS_USE_EXPANDER,
             .cs_gpio_num = BIT64(ESP_PANEL_LCD_SPI_IO_CS),
-            .scl_io_type = (panel_io_type_t)ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER,
+            .scl_io_type = (panel_io_type_t)ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER,
             .scl_gpio_num = BIT64( ESP_PANEL_LCD_SPI_IO_SCL),
-            .sda_io_type = (panel_io_type_t)ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER,
+            .sda_io_type = (panel_io_type_t)ESP_PANEL_LCD_SPI_SDA_USE_EXPANDER,
             .sda_gpio_num = BIT64(ESP_PANEL_LCD_SPI_IO_SDA),
         },
         .expect_clk_speed = ESP_PANEL_LCD_SPI_CLK_HZ,
@@ -225,7 +225,7 @@ void ESP_Panel::init(void)
     ESP_PanelBus *lcd_bus = NULL;
 #if ESP_PANEL_USE_LCD
 #if (ESP_PANEL_LCD_BUS_TYPE == ESP_PANEL_BUS_TYPE_RGB) && \
-    (ESP_PANEL_LCD_SPI_CS_USE_EXPNADER || ESP_PANEL_LCD_SPI_SCL_USE_EXPNADER || ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER)
+    (ESP_PANEL_LCD_SPI_CS_USE_EXPNADER || ESP_PANEL_LCD_SPI_SCL_USE_EXPANDER || ESP_PANEL_LCD_SPI_SDA_USE_EXPNADER)
     // For `3-wire SPI + RGB` bus, we may need IO expander to control pins
     CHECK_NULL_RETURN(expander);
     lcd_bus_host_cfg.line_config.io_expander = expander->getHandle();
@@ -283,7 +283,7 @@ void ESP_Panel::begin(void)
         lcd->swapAxes(ESP_PANEL_LCD_SWAP_XY);
         lcd->mirror(ESP_PANEL_LCD_MIRROR_X, ESP_PANEL_LCD_MIRROR_Y);
 #endif
-        lcd->invertColor(ESP_PANEL_LCD_INEVRT_COLOR);
+        lcd->invertColor(ESP_PANEL_LCD_INVERT_COLOR);
         lcd->begin();
 #if (ESP_PANEL_LCD_BUS_TYPE != ESP_PANEL_BUS_TYPE_RGB) || (ESP_PANEL_LCD_RGB_IO_DISP != -1)
         lcd->displayOn();
