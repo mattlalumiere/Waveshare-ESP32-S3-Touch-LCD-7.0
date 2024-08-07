@@ -1,6 +1,14 @@
-# Waveshare ESP32-S3-Touch-LCD-4.3 with Squareline Studio and PlatformIO
+# Waveshare ESP32-S3-Touch-LCD-7.0 with Squareline Studio and PlatformIO
 
-This is a first test with getting a Waveshare ESP32-S3-LCD-4.3 Touch running with an exported template project from SquareLine Studio.
+--Note: This is a fork from https://github.com/istvank/Waveshare-ESP32-S3-Touch-LCD-4.3  / https://github.com/istvank
+
+This is a working repo to develop a new project. There were some spelling and reference improvements made. 
+
+I chose this project because all the tooling met my requirements.
+
+---
+
+This is a first test with getting a Waveshare ESP32-S3-LCD-7.0 Touch running with an exported template project from SquareLine Studio.
 
 It is a very simple two-screen UI with buttons going back and forth.
 
@@ -14,12 +22,13 @@ It is a very simple two-screen UI with buttons going back and forth.
 
 ## Libraries
 
-The libraries are the ones provided on the [Waveshare Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-4.3): [S3-4.3-libraries.zip](https://files.waveshare.com/wiki/ESP32-S3-Touch-LCD-4.3/S3-4.3-libraries.zip), except for lvgl, which is added as library dependency in `platformio.ini`.
-
-I tried to add the other two libraries as dependencies as well, but Waveshare made some changes:
+The libraries are the ones provided on the [Waveshare Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-7): [ ESP32-S3-Touch-LCD-7_libraries.zip](https://files.waveshare.com/wiki/ESP32-S3-Touch-LCD-7/ESP32_S3_Display_libraries.zip), except for lvgl, which is added as library dependency in `platformio.ini`. See the following [Instruction:](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-7#Library_Installation)]
 
 - ESP32_IO_Expander: The CH422G chip was added. There are [forks](https://github.com/esp-arduino-libs/ESP32_IO_Expander/network) from the original ESP32 repo including the new files, but nothing official yet.
 - ESP32_Display_Panel: There are also some changes in the repo, that I did not yet investigate.
+
+
+2024-08-07: Please note: The official ESP_IO_Expander and ESP32_Display_External libraries do have support for the WaveShare devices, but were not compiling properly for me. Others may have better luck.  
 
 ## SquareLine Studio
 
